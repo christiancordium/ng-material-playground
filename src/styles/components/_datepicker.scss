@@ -1,0 +1,155 @@
+@import '~pikaday/scss/pikaday';
+@import 'helpers/mixins';
+
+.pika-lendar {
+	width: 12.5rem;
+}
+
+.pika-single.is-bound {
+	@include datepicker-box-shadow($alpha50);
+	margin: auto;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.pika-single {
+	border: none;
+}
+
+.pika-row {
+	border: none;
+}
+
+.pika-title .pika-label {
+	text-transform: uppercase;
+	font-family: 'sofia-pro';
+	letter-spacing: 0.0625rem;
+	font-size: 0.875rem;
+	color: $darkBlue;
+}
+
+.pika-table th {
+	color: $blue80;
+	text-transform: uppercase;
+	font-family: 'sofia-pro';
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+.pika-table thead {
+	border-bottom: 1px solid $blue80;
+}
+
+.pika-button {
+	background-color: $white;
+	text-align: center;
+	font-family: 'sofia-pro';
+	font-size: 0.875rem;
+	color: $darkGrey;
+	font-weight: 300;
+	line-height: 1.4em;
+
+	.is-today & {
+		color: $blue80;
+		// font-weight: 300;
+	}
+
+	.is-today.is-selected &{
+		color: $white;
+	}
+}
+
+.pika-table abbr {
+	text-decoration: none;
+	cursor: default;
+}
+
+.pika-button:hover {
+	background: $green;
+	color: $white;
+	border-radius: 0;
+	font-weight: 300;
+}
+
+.is-empty.pika-button:hover {
+	text-decoration: none;
+}
+
+.is-selected .pika-button {
+	background: $green;
+	font-weight: 300;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.pika-next,
+.pika-prev {
+	color: $darkBlue;
+	opacity: 1;
+}
+
+
+[appDatepicker],
+.is-datepicker {
+	-webkit-appearance: none;
+	border: 1px solid $blue80;
+	padding: 0;
+	border-radius: 4px;
+	cursor: pointer;
+	line-height: 2.2em;
+	height: 1.5rem;
+
+	.small & {
+		line-height: 1.75em;
+	}
+}
+
+.app-datepicker-container {
+	position: relative;
+	&:after {
+		content: '';
+		height: 0;
+		width: 0;
+		border-style: solid;
+		border-width: 5px;
+		position: absolute;
+		right: 11.5px; /* px because button */
+		top: 60%;
+		margin-top: -2.5px; /* px because button */
+		pointer-events: none;
+	}
+	&:after {
+		border-color: $grey30 transparent transparent transparent;
+	}
+
+	.open &:after {
+		border-color: transparent transparent $grey30 transparent;
+		top: 50%;
+	}
+
+	&.small {
+
+		&:after {
+			margin-top: -2.5px; /* px because button */
+			border-color: $blue90 transparent transparent transparent;
+			top: 50%;
+		}
+
+		&.is-open:after {
+			border-color: transparent transparent $blue90 transparent;
+			top: 31%;
+		}
+
+	}
+
+
+}
+.completion-date--body {
+	.pika-single{
+		.pika-lendar {
+			margin: 0;
+			padding: 8px;
+			width: 240px;
+		}
+	}
+}

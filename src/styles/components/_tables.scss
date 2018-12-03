@@ -1,0 +1,83 @@
+@import 'helpers/colors';
+
+.cor-data-table {
+	background: #fff;
+	display: block;
+}
+
+.cor-header-row {
+	min-height: 2.2rem;
+	font-family: 'sofia-pro';
+	font-size: 0.875rem;
+	font-weight: 400;
+}
+
+.cor-data-row {
+	min-height: 4rem;
+}
+
+.cor-data-row,
+.cor-header-row {
+	display: flex;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	align-items: center;
+	box-sizing: border-box;
+
+	&::after {
+		display: inline-block;
+		min-height: inherit;
+		content: '';
+	}
+}
+
+.cor-data-cell,
+.cor-header-cell {
+	flex: 1;
+	overflow: hidden;
+	word-wrap: break-word;
+
+	margin-right: 1.25rem;
+}
+
+.cor-header-row {
+	border-bottom-color: $darkBlue;
+}
+
+.cor-data-row {
+	border-bottom-color: $grey10;
+
+	&:last-child {
+		border: none;
+	}
+}
+
+.cor-data-cell {
+	font-family: 'ApercuProRegular';
+	font-size: 0.875rem;
+	color: $grey50;
+
+	a {
+		font-family: 'ApercuProRegular';
+		color: $grey50;
+		text-decoration: none;
+
+		&:visited {
+			color: $grey50;
+		}
+	}
+}
+
+.cor-header-cell {
+	color: $grey50;
+}
+
+.cor-data-table .text-with-icon .text {
+
+	display: block;
+
+	overflow: hidden;
+	width: auto;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

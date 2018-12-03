@@ -1,0 +1,71 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/build
+/dll
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+graphql.config.json
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug*
+testem.log
+/typings
+package-lock.json
+yarn-error.log
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+*.swp
+# environmental values
+.env
+
+# graphql plugin for intellij
+graphql.config.json
+
+# bin directory
+/bin/server.*
+
+# editorconfig
+.editorconfig
+
+# atlas auto-generated schema file
+src/app/shared/atlas/schema.json
+
+# atlas types
+src/types/atlas/client/index.d.ts
+
+protractor-screenshot.*.png
+
+# deployment slug
+deployment-slug.zip

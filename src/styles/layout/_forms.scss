@@ -1,0 +1,305 @@
+$choices-button-icon-path: '~choices.js/assets/icons';
+
+@import 'helpers/colors';
+@import '~choices.js/assets/styles/scss/choices';
+
+/**
+  * BEGIN Third Party Adjustments 
+*/
+
+.#{$choices-selector}__list--dropdown .#{$choices-selector}__item--selectable {
+	@media (min-width: 640px) {
+		padding-right: 10px;
+	}
+}
+
+.#{$choices-selector}[data-type*='select-one'] {
+
+	&:after {
+		border-color: $grey30 transparent transparent transparent;
+		top: 60%;
+	}
+
+	&.is-open:after {
+		border-color: transparent transparent $grey30 transparent;
+	}
+
+	.small & {
+	
+		&:after {
+			border-color: $blue90 transparent transparent transparent;
+			top: 50%;
+		}
+	
+		&.is-open:after {
+			border-color: transparent transparent $blue90 transparent;
+		}
+	}
+}
+
+.choices {
+	margin-bottom: 0;
+}
+
+.choices__inner {
+	background: $white;
+	border: none;
+	border-bottom: 1px solid $grey30;
+	font-size: 1rem;
+	padding: 0;
+	.small & {
+		border: 1px solid $blue80;
+	}
+	.is-open &,
+	.is-flipped.is-open &, {
+		border-radius: 4px;
+	}
+}
+
+.choices__list--dropdown {
+	z-index: 2;
+
+	border: 1px solid $grey30;
+	width: auto;
+	word-break: normal;
+	overflow-x: visible;
+	white-space: nowrap;
+	min-width: 100%;
+	
+	.is-open & {
+		border-top: 1px solid $blue90;
+	}
+	.small .is-open & {
+		border-top-color: $grey30;
+	}
+}
+.choices__list--dropdown .choices__item[data-value=''] {
+	display: none;
+}
+.choices__list--single,
+.choices__inner {
+	padding: 0;
+	line-height: 1.5rem;
+	min-height: 1em;
+
+	.small & {
+		line-height: 1em;
+		font-size: 0.875rem;
+		display: block;
+		width: auto;
+	}
+}
+.choices[data-type*='select-one'] .choices__inner {
+	padding: 0.5rem 0 0 0;
+	border-radius: 0px;
+
+	.small & {
+		border: 1px solid $blue80;
+		padding: 0.375rem 1.8125rem 0.375rem .375rem;
+		border-radius: 4px;
+	}
+}
+
+.choices__list--dropdown .choices__list {
+	overflow-x: hidden;
+}
+
+.choices__item--selectable.is-highlighted {
+	color: $blue80;
+	font-family: 'ApercuProRegular';
+}
+
+/**
+  * END Third Party Adjustments 
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea,
+.dropdown,
+.input,
+a.button {
+	font-family: 'ApercuProLight';
+	line-height: 1.25rem;
+}
+
+a.button {
+	text-align: center;
+}
+
+.input {
+	line-height: 2.5rem;
+}
+
+input,
+.input {
+	height: 2.5rem;
+
+	.small & {
+		height: 1.75rem;
+		padding: 0.3125rem;
+	}
+}
+
+input,
+textarea,
+.input {
+	flex: 1;
+	letter-spacing: 0.00625em;
+	border: 1px solid $grey30;
+	padding: 0.625rem;
+}
+
+select {
+	-webkit-appearance: none;
+	background: $white;
+	color: $grey50;
+	border-radius: 0;
+	border-width: 1px;
+}
+
+aca-form-field {
+	input,
+	textarea {
+		&::placeholder {
+			color: transparent!important
+		}
+		&::-moz-placeholder {
+			color: transparent!important
+		}
+		&::-webkit-input-placeholder {
+			color: transparent!important
+		}
+		&:-ms-input-placeholder {
+			color: transparent!important
+		}
+	}
+	
+	label {
+		font-family: 'sofia-pro';
+		font-weight: 500;
+		position: absolute;
+		font-size: 0.75rem;
+		line-height: 1.5rem;
+		pointer-events: none;
+		transition: .3s;
+		color: $grey40;
+		letter-spacing: 0.0125rem;
+		bottom: 0;
+		
+		&.text-input {
+			padding-left: 0.625rem;
+			top: 0.5rem;
+		}
+	
+		&.float {
+			font-size: 0.75rem;
+			line-height: 1.75em;
+			top: -1.75rem;
+			margin-top: 0rem;
+
+			&.text-input {
+				top: -2.75em;
+			}
+		}
+	
+		&.active {
+			color: $blue90;
+		}
+	
+		&[hidden] {
+			display: none;
+		}
+	}
+
+	&.member-selector label.float {
+		top: -2.75em;
+	}
+}
+
+button.btn,
+a.button {
+	-webkit-appearance: none;
+	background: $white;
+	border: none;
+	color: $blue90;
+	border: 1px solid $blue90;
+	padding: 0;
+	line-height: 2.3em;
+	font-family: 'sofia-pro';
+	font-weight: normal;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	min-width: 120px; /* px since it's a button */
+	letter-spacing: 0.0625rem;
+	outline: none;
+	cursor: pointer;
+
+	&:hover {
+		&:enabled {
+			background-color: $green;
+			color: $white;
+			border-color: $white;	
+		}
+	}
+	&:active {
+		&:enabled {
+			background-color: $green10;
+			color: $white;
+			border-color: $white;	
+		}
+	}
+	&:disabled {
+		cursor: default;
+		color: $grey40;
+		border-color: $grey40;
+	}
+}
+
+input[type=checkbox],
+input[type=radio] {
+	display: none;
+	& + label {
+		pointer-events: auto;
+		border: none;
+		background: none;
+		cursor: pointer;
+		color: $blue50;
+
+		&:before {
+			content: unicode($icon-radio_button_unchecked);
+		}
+	}
+
+	&:checked + label {
+		color: $green;
+		&:before {
+			content: unicode($icon-radio_button_checked);
+		}
+	}
+}
+
+button {
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+	
+	&:focus {
+		outline: 0;
+	}
+
+	&[disabled] {
+		cursor: default;
+	}
+}
+
+.container--card-header {
+	text-transform: uppercase;
+	font-family: 'sofia-pro';
+	font-size: 0.75rem;
+	color: $grey50;
+	font-weight: 600;
+	letter-spacing: 0.04rem;
+}

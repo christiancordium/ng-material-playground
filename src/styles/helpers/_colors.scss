@@ -1,0 +1,168 @@
+@import './mat-mixins';
+$darkBlue: #060C4E; // royal
+$darkBlueAlpha95: rgba(6, 12, 78, 0.95) ;
+$darkGreen: #14A82E; // ivy
+$green10: #1CA834; // ivy
+$green: #20BB3B; //ivy 
+$lightGreen: #d6f2db; //ivy 
+$blue100: #1f255e;
+$blue90: #0F1CAF; // dusk
+$blue80: #353FAC; // dusk
+$blue70: #4E559F; // dusk
+$blue60: #656AA3; //dove
+$blue50: #060c4d; // dusk?
+$bluegrey: #373C69; //slate
+$black: #000000; // night
+$blackAlpha50: rgba(0, 0, 0, 0.5);
+$darkGrey: #202D31;
+$grey50: #5C6163;
+$grey40: #9b9EA0; // concrete
+$grey30: #C2C6C7; //cloud
+$grey25: #DCDCDC;
+$grey20: #E9E9E9; // fog
+$grey10: #F3F3F3; // marshmellow
+$orange: #FF4B27; // clooney
+$pink: #F4BDC3; // blush
+$red: #D00219; //ruby
+$white: #FFFFFF; // snow
+$alpha05: rgba(0, 0, 0, 0.05);
+$alpha50: rgba(182, 182, 182, 0.5);
+
+$blush: #f4bdc3;
+$dusk: #4e559f;
+$canary: #eacc32;
+$clooney: #f46036;
+$cloud: #c2c6c7;
+$concrete: #9b9ea0;
+$dove: #656aa3;
+$fog: #e9e9e9;
+$ivy: #14aa2e;
+$marshmellow: #f3f3f3;
+$night: #000000;
+$rainiel: #f6f6f6;
+$royal:#060c4e;
+$ruby: #d00219;
+$slate: #3b3e42;
+$snow: #ffffff;
+// TYPOGRAPHY
+$main-font: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+$code-font: "Droid Sans Mono", monospace;
+
+// Z-LAYER
+$layer-1: 1;
+$layer-2: 2;
+$layer-3: 3;
+$layer-4: 4;
+$layer-5: 5;
+
+// COLOR PALETTE
+$blue: #1976D2;
+$accentblue: #1E88E5;
+$brightred: #DD0031;
+$darkred: #C3002F;
+$white: #FFFFFF;
+$offwhite: #FAFAFA;
+$backgroundgray: #F1F1F1;
+$lightgray: #DBDBDB;
+$mist: #ECEFF1;
+$mediumgray: #6e6e6e;
+$darkgray: #333;
+$black: #0A1014;
+$orange: #FF9800;
+$darkorange: #940;
+$anti-pattern: $brightred;
+
+// API & CODE COLORS
+$amber-700: #FFA000;
+$blue-400: #42A5F5;
+$blue-500: #2196F3;
+$blue-600: #1E88E5;
+$blue-800: #1565C0;
+$blue-900: #0D47A1;
+$blue-grey-50: #ECEFF1;
+$blue-grey-100: #CFD8DC;
+$blue-grey-200: #B0BEC5;
+$blue-grey-300: #90A4AE;
+$blue-grey-400: #78909C;
+$blue-grey-500: #607D8B;
+$blue-grey-600: #546E7A;
+$blue-grey-700: #455A64;
+$blue-grey-800: #37474F;
+$blue-grey-900: #263238;
+$codegreen: #17ff0b;
+$green-500: #4CAF50;
+$green-800: #2E7D32;
+$light-green-600: #7CB342;
+$pink-600: #D81B60;
+$purple-600: #8E24AA;
+$teal-500: #009688;
+$lightgrey: #F5F6F7;
+
+// GRADIENTS
+$bluegradient: linear-gradient(145deg,#0D47A1,#42A5F5);
+$redgradient: linear-gradient(145deg,$darkred,$brightred);
+
+// API LABEL COLOR AND SYMBOLS MAP
+$api-symbols: (
+  all: (
+    content: ' ',
+    background: $white
+  ),
+  class: (
+    content: 'C',
+    background: $blue-500
+  ),
+  const: (
+    content: 'K',
+    background: $mediumgray
+  ),
+  decorator: (
+    content: '@',
+    background: $blue-800
+  ),
+  directive: (
+    content: 'D',
+    background: $pink-600
+  ),
+  enum: (
+    content: 'E',
+    background: $amber-700
+  ),
+  function: (
+    content: 'F',
+    background: $green-500
+  ),
+  interface: (
+    content: 'I',
+    background: $teal-500
+  ),
+  let: (
+    content: 'K',
+    background: $mediumgray
+  ),
+  ngmodule: (
+    content: 'M',
+    background: $darkorange
+  ),
+  package: (
+    content: 'Pk',
+    background: $purple-600
+  ),
+  pipe: (
+    content: 'P',
+    background: $blue-grey-600
+  ),
+  type-alias: (
+    content: 'T',
+    background: $light-green-600
+  ),
+  var: (
+    content: 'K',
+    background: $mediumgray
+  ),
+);
+
+// OTHER
+$small-breakpoint-width: 840px;
+$phone-breakpoint: 480px;
+$tablet-breakpoint: 800px;

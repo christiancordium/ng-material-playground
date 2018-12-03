@@ -1,0 +1,100 @@
+@import 'helpers/mat-colors';
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+  
+  
+*,
+*:before,
+*:after {
+	box-sizing: border-box
+}
+
+html, body {
+	height: 100%;
+}
+
+html {
+	font-size: 16px;
+	@media screen and (max-device-width: 1300px) { 
+		font-size: 13px;
+	}
+}
+
+body {
+	font-family: $main-font;
+	line-height: 1.5em;
+}
+
+h1 {
+	font-family: $main-font;
+	font-size: 1.5rem;
+	// color: $blue90;
+	text-transform: uppercase;
+	letter-spacing: 0.0625rem;
+	font-weight: 300;
+	line-height: 1.2em;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+h2 {
+	font-family: $main-font;
+	font-size: 1.125rem;
+	font-weight: 700;
+	// color: $darkBlue;
+	text-transform: uppercase;
+	line-height: 1.25rem;
+	letter-spacing: 0.125rem;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+h3 {
+	font-family: $main-font;
+	font-size: 1.125rem;
+	// color: $darkGrey;
+	line-height: 1.25rem;
+	font-weight: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+h5 {
+	font-family: $main-font;
+	font-size: 0.75rem;
+	letter-spacing: 0.0625rem;
+	line-height: 1.75em;
+	// color: $grey40;
+	font-weight: 500;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	text-transform: uppercase;
+}
+
+a {
+	font-family: $main-font;
+	// color: $darkGrey;
+	text-decoration: none;
+
+	&:hover {
+		// color: $blue90;
+	}
+	&:visited {
+		// color: $darkGrey;
+		&:hover {
+			// color: $blue90;
+		}
+	}
+}
+
+[hidden] {
+	display: none !important; /* Note: Important so entire app can use it regardless of scope. Hidden has no other meaning. DRY */
+}
+

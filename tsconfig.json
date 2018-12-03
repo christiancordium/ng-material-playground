@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"skipLibCheck": true,
+		"baseUrl": "src",
+		"target": "es5",
+		"module": "es2015",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"lib": [ "es2015", "dom" ],
+		"noImplicitAny": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"typeRoots": [
+			"./node_modules/@types/",
+			"types/"
+		],
+		"outDir": "build/tsc",
+		"paths": {
+		  "@angular/*": [ "../node_modules/@angular/*"],
+		  "Rxjs": [ "../node_modules/rxjs"]
+		}
+	},
+	"compileOnSave": true,
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.spec.ts",
+		"e2e/**/*.ts"
+	]
+}

@@ -1,0 +1,7 @@
+@import 'helpers/mixins';
+
+.panel-card {
+	@include tasks-component-box-shadow($grey20);
+	border: 1px solid $grey20;
+	background-color: $white;
+}

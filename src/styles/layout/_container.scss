@@ -1,0 +1,43 @@
+@import 'helpers/colors';
+@import 'helpers/constants';
+
+$sidePanelWidth: 22rem;
+
+.leftPanel--collapsed {
+	margin-left: -($sidePanelWidth);
+}
+
+.rightPanel--collapsed {
+	margin-right: -($sidePanelWidth);
+}
+
+.content-panel-fixed {
+	flex: 1;
+	padding-left: 2.5rem;
+	padding-top: 3.4rem;
+	padding-bottom: 3.4rem;
+	padding-right: $outerMarginWidth;
+	overflow-y: auto;
+	background-color: $grey10;
+	position: relative;
+	transition: padding .5s ease;
+	display: flex;
+	flex-direction: column;
+}
+
+.left-panel-fixed {
+	width: $sidePanelWidth;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: $white;
+}
+
+.right-panel-fixed {
+	width: 20%;
+	max-width: $sidePanelWidth;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: $white;
+}

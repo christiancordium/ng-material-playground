@@ -1,0 +1,43 @@
+<h4>
+    Button Styles
+</h4>
+
+<div>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-stroked-button disabled>Deactive</button>
+</div>
+
+<h4>
+    Button Toggle
+</h4>
+<div>
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left">
+            Yes
+        </mat-button-toggle>
+        <mat-button-toggle value="right">
+            No
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+
+<h4>
+        Tooltip
+</h4>
+<button mat-raised-button
+        matTooltip="Tooltip"
+        [matTooltipShowDelay]="showDelay"
+        [matTooltipHideDelay]="hideDelay"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+    Action
+</button>
+
+<h4>
+    Checkbox
+</h4>
+
+<div>
+    <mat-checkbox>
+        Check me!
+    </mat-checkbox>
+</div>
