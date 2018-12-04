@@ -17,8 +17,8 @@
 	"license": "MIT",
 	"private": true,
 	"dependencies": {
-		"@acats/aca-devtools": "^0.18.14",
-		"@acats/aca-lib": "^0.30.20",
+		"@acats/aca-devtools":"0.21.3",
+		"@acats/aca-lib": "0.34.1",
 		"@angular/animations": "^6.1.10",
 		"@angular/cdk": "^7.0.2",
 		"@angular/common": "^6.1.10",
